@@ -1,0 +1,17 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  background-color: blue;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: red;
+  min-width: 750px;
+  width: 45%;
+  height: 80%;
+}
+.title {
+}

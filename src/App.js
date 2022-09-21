@@ -10,8 +10,11 @@ const todoList = [
   { text: "Crear un todo", completed: false },
   { text: "Aprender react", completed: false },
   { text: "Crear un nodo virtual", completed: false },
+  {
+    text: "La dominacion del mundo mediante el conocimiento de la razon mediatica",
+    completed: false,
+  },
 ];
-
 function App(props) {
   return (
     <div className="main">

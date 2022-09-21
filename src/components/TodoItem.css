@@ -1,14 +1,56 @@
 ul {
   list-style: none;
-  margin: 0;
+  margin: 0 15px;
   padding: 0;
-  position: relative;
+  font-size: 1.4rem;
+  width: 80%;
 }
-li::before {
-  content: "★";
-  content: "☆";
-  position: absolute;
-  left: -15px;
+.status {
+  margin-bottom: 5px;
+}
+span {
+  width: 7%;
+}
+li:hover {
+  background: rgb(255, 228, 179);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 196, 218, 0.95) 0%,
+    rgba(255, 255, 255, 0.95) 10%,
+    rgba(255, 255, 255, 0.95) 90%,
+    rgba(200, 193, 255, 0.95) 100%
+  );
 }
 li {
+  user-select: none;
+  border-radius: 50px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  background: rgb(255, 228, 179);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 196, 218, 0.55) 0%,
+    rgba(255, 255, 255, 0.65) 10%,
+    rgba(255, 255, 255, 0.65) 90%,
+    rgba(200, 193, 255, 0.55) 100%
+  );
+}
+p {
+  margin: 0;
+  width: 86%;
+}
+.delete:hover {
+  animation: deleteBtn 0.5s ease;
+}
+
+@keyframes deleteBtn {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }

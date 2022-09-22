@@ -1,16 +1,25 @@
 import React from "react";
 import "./TodoItem.css";
 
-const state = {
-  pending: "☆",
-  compleded: "★",
-};
 function TodoItem(props) {
+  const onComplete = () => {
+    props.onComplete();
+  };
+  const onDelete = () => {
+    props.onDelete();
+  };
   return (
-    <li>
-      <span className="status">{state.pending}</span>
-      <p>{props.text}</p>
-      <span className="delete">X</span>
+    <li className={`${props.completed && "task-completed"}`}>
+      <span
+        className={`status ${props.completed && "icon-completed"}`}
+        onClick={onComplete}
+      >
+        ★
+      </span>
+      <p className={`${props.completed && "text-completed"}`}>{props.text}</p>
+      <span className="delete" onClick={onDelete}>
+        X
+      </span>
     </li>
   );
 }

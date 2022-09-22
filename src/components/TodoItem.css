@@ -7,6 +7,7 @@ ul {
 }
 .status {
   margin-bottom: 5px;
+  cursor: pointer;
 }
 span {
   width: 7%;
@@ -42,10 +43,37 @@ p {
   margin: 0;
   width: 86%;
 }
+.delete {
+  cursor: pointer;
+}
 .delete:hover {
   animation: deleteBtn 0.5s ease;
+  color: red;
 }
-
+.task-completed {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 196, 218, 0.25) 0%,
+    rgba(255, 255, 255, 0.25) 10%,
+    rgba(255, 255, 255, 0.25) 90%,
+    rgba(200, 193, 255, 0.25) 100%
+  );
+}
+.task-completed:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 196, 218, 0.25) 0%,
+    rgba(255, 255, 255, 0.25) 10%,
+    rgba(255, 255, 255, 0.25) 90%,
+    rgba(200, 193, 255, 0.25) 100%
+  );
+}
+.text-completed {
+  text-decoration: line-through;
+}
+.icon-completed {
+  color: #c1fba4;
+}
 @keyframes deleteBtn {
   0% {
     transform: rotate(0);
